@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Ispit.API/Ispit.API.csproj" />
+  <Project Path="Ispit.Data/Ispit.Data.csproj" />
+</Solution>

@@ -1,4 +1,7 @@
 
+using Ispit.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Ispit.API;
 
 public class Program
@@ -14,6 +17,11 @@ public class Program
         builder.Services.AddOpenApi();
 
         builder.Services.AddSwaggerGen();
+
+        var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+        builder.Services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(connectionString));
 
         var app = builder.Build();
 

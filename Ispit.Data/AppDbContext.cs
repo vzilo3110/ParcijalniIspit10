@@ -20,7 +20,7 @@ public class AppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=Algebra.Movies2026;Trusted_Connection=True;MultipleActiveResultSets=true");
+        optionsBuilder.UseSqlServer("Server=BSS-VZILO\\SQLEXPRESS01;Database=ShoppingDB;Trusted_Connection=True;TrustServerCertificate=True;");
 
         base.OnConfiguring(optionsBuilder);
     }
